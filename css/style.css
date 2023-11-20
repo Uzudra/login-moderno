@@ -35,7 +35,7 @@ h3{
     padding: 20px;
     box-shadow: 0 0 5px rgb(143, 0, 183), 0 0 5px rgb(253, 0, 177), 0 0 5px rgb(83, 1, 225);
     transition: all 2s ease-in-out;
-    animation: mover 2s ease-in infinite;
+    animation: mover 2s ease-in-out infinite alternate;
 }
 
 .buttons {
@@ -203,7 +203,7 @@ label input:focus:not(.section-checkbox input[type="checkbox"]) {
     box-shadow: 0 0 5px rgb(143, 0, 183), 0 0 5px #fd00b1, 0 0 5px rgb(83, 1, 225);
     background: linear-gradient(135deg, rgb(143, 0, 183) 10%, rgb(253, 0, 177),rgb(83, 1, 225));
     transition: all 2s ease-in-out;
-    animation: box-shadow-button 2s ease-in infinite;
+    animation: box-shadow-button 2s ease-in-out infinite alternate;
 }
 
 .formulario button:hover {
@@ -212,7 +212,7 @@ label input:focus:not(.section-checkbox input[type="checkbox"]) {
 
 @keyframes mover {
     from {
-        box-shadow: 0 0 10px rgb(143, 0, 183), 0 0 15px rgb(253, 0, 177), 0 0 10px rgb(83, 1, 225);
+        box-shadow: 0 0 10px rgb(143, 0, 183), 0 0 10px rgb(253, 0, 177), 0 0 10px rgb(83, 1, 225);
     }
 }
 @keyframes box-shadow-button {
@@ -224,7 +224,6 @@ label input:focus:not(.section-checkbox input[type="checkbox"]) {
 @media (max-width: 550px) {
     .body {
         background-size: cover;
-        height: 100vh;
         box-sizing: border-box;
     }
 
@@ -232,5 +231,6 @@ label input:focus:not(.section-checkbox input[type="checkbox"]) {
         width: 90%;
         height: 100vh;
         box-sizing: border-box;
+        backdrop-filter: blur(6px);
     }
 }
