@@ -229,7 +229,7 @@ label input:focus:not(.section-checkbox input[type="checkbox"]) {
     }
 
     .container{
-        width: 80%;
+        width: 90%;
         height: 100vh;
         box-sizing: border-box;
     }
