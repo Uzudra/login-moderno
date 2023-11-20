@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html {
+    /* background-color: #787878; */
+    background: url(/assets/img/Colorbackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    backdrop-filter: blur(10px);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 416px;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgb(143, 0, 183), 0 0 5px rgb(253, 0, 177), 0 0 5px rgb(83, 1, 225);
+    transition: all 2s ease-in-out;
+    animation: mover 2s ease-in infinite;
+
+}
+
+.buttons {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #4172EA;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height: 36px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-twitter {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 35px;
+}
+
+.btn-google:hover,
+.btn-twitter:hover {
+    opacity: 0.75;
+}
+
+.btn-google picture {
+    height: 35px;
+    width: 35px;
+    padding: 1px;
+
+}
+
+.btn-google picture img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn-google span {
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.separators {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.separators hr:first-child {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #dedede00;
+    border-radius: 10px;
+    background: linear-gradient(to left, rgb(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+}
+
+.separators hr:last-child {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #dedede00;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+}
+
+.separators span {
+    color: #fff;
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 30px;
+}
+
+.section-inputs {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+label input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #ffff;
+    transition: all 300ms ease-in-out;
+}
+
+label span {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+label input:hover:not(.section-checkbox input[type="checkbox"]) {
+    background-color: #b8b8b8;
+    border: 1px solid black;
+    box-shadow: 0 0 2px #fff;
+}
+
+label input:focus:not(.section-checkbox input[type="checkbox"]) {
+    background-color:#b8b8b8;
+    border: 1px solid black;
+    box-shadow: 0 0 2px #fff;
+}
+
+.section-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    margin: 0;
+}
+
+.section-checkbox input {
+    margin: 0;
+    width: 20px;
+}
+
+.section-checkbox span {
+    align-self: center;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+.formulario button {
+    align-self: center;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgb(143, 0, 183), 0 0 5px #fd00b1, 0 0 5px rgb(83, 1, 225);
+    background: linear-gradient(135deg, rgb(143, 0, 183) 10%, rgb(253, 0, 177),rgb(83, 1, 225));
+    transition: all 2s ease-in-out;
+    animation: box-shadow-button 2s ease-in infinite;
+}
+
+
+.formulario button:hover {
+    opacity: 0.85;
+}
+
+@keyframes mover {
+    from {
+        box-shadow: 0 0 10px rgb(143, 0, 183), 0 0 15px rgb(253, 0, 177), 0 0 10px rgb(83, 1, 225);
+    }
+}
+@keyframes box-shadow-button {
+    from {
+        box-shadow: 0 0 15px rgb(143, 0, 183), 0 0 15px rgb(253, 0, 177), 0 0 15px rgb(83, 1, 225);
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        background-size: cover;
+        height: 100vh;
+    }
+}
