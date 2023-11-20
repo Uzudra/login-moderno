@@ -229,8 +229,8 @@ label input:focus:not(.section-checkbox input[type="checkbox"]) {
     }
 
     .container{
-        width: auto;
-        height: 95vh;
+        width: 80%;
+        height: 100vh;
         box-sizing: border-box;
     }
 }
